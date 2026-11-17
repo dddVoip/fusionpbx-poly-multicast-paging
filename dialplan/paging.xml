@@ -1,0 +1,21 @@
+<include>
+  <!--
+    Two dialplan entries. Create each one in FusionPBX > Dialplan > Dialplan Manager (XML view),
+    context = your domain. Paste ONE <extension> element at a time, not the <include> wrapper:
+    the wrapper only keeps this file valid XML. Both patterns are anchored; keep it that way.
+  -->
+
+  <!-- Leg started by zone_page.lua, one per stream: sends the conference audio to that stream. -->
+  <extension name="Page_Leg" continue="false">
+    <condition field="destination_number" expression="^pageleg-(\w+)$">
+      <action application="lua" data="page_leg.lua $1"/>
+    </condition>
+  </extension>
+
+  <!-- Public number: 7201 pages zone 1, 7202 pages zone 2, ... 7209 pages zone 9. -->
+  <extension name="Page_Zone" continue="false">
+    <condition field="destination_number" expression="^720([1-9])$">
+      <action application="lua" data="zone_page.lua $1"/>
+    </condition>
+  </extension>
+</include>
