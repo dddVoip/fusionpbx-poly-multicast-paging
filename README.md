@@ -121,7 +121,6 @@ Not tested:
 ## More
 
 - [docs/poly-phones.md](docs/poly-phones.md): the channel byte, provisioning, verification
-- [docs/gotchas.md](docs/gotchas.md): mistakes that cost us hours
 
 ## License
 
