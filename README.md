@@ -116,7 +116,7 @@ Not tested:
   cleans both before using them in the originate command or the email. Keep that if you modify the script.
 - **Pages are audio and possibly personal data.** Recordings and emailed copies need an access and
   retention policy.
-- Report security problems privately to [add a contact], not in a public issue.
+- Report security problems privately to dddvoip@gmail.com, not in a public issue.
 
 ## More
 
